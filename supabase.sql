@@ -38,8 +38,7 @@ insert into storage.buckets (id, name, public)
 values ('clips', 'clips', true)
 on conflict (id) do nothing;
 
--- Storage object policies
-alter table storage.objects enable row level security;
+-- Storage object policies (RLS already enabled by Supabase on storage.objects)
 
 create policy "clips_public_read" on storage.objects
   for select

@@ -1,13 +1,13 @@
 :root {
-  --bg: #0b0d12;
-  --bg-2: #0d1017;
-  --glass: rgba(13, 17, 26, 0.62);
-  --glass-strong: rgba(13, 17, 26, 0.8);
+  --bg: #0a0a0a;
+  --bg-2: #111111;
+  --glass: rgba(18, 18, 18, 0.7);
+  --glass-strong: rgba(18, 18, 18, 0.86);
   --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
-  --text: #e6ebf2;
-  --muted: #9aa4b4;
-  --accent: #c7d0df;
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --text: #f2f2f2;
+  --muted: #b0b0b0;
+  --accent: #ffffff;
   --shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
   --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.5);
   --radius: 20px;
@@ -58,9 +58,9 @@ button {
   position: fixed;
   inset: -20%;
   background:
-    radial-gradient(800px 400px at 18% 10%, rgba(82, 94, 118, 0.32), transparent 60%),
-    radial-gradient(900px 520px at 82% 16%, rgba(60, 72, 96, 0.28), transparent 62%),
-    radial-gradient(900px 680px at 50% 85%, rgba(45, 55, 76, 0.25), transparent 70%);
+    radial-gradient(900px 480px at 20% 12%, rgba(255, 255, 255, 0.12), transparent 60%),
+    radial-gradient(900px 520px at 80% 18%, rgba(255, 255, 255, 0.1), transparent 62%),
+    radial-gradient(900px 680px at 50% 88%, rgba(255, 255, 255, 0.08), transparent 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -145,7 +145,8 @@ button {
 .nav-link.active,
 .nav-link:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.18);
 }
 
 .nav-right {
@@ -184,7 +185,7 @@ button {
 .profile-button:hover {
   transform: translateY(-1px);
   border-color: var(--border-strong);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .profile-dropdown {
@@ -276,7 +277,7 @@ main {
   grid-template-columns: 28px 1fr auto;
   align-items: center;
   gap: 10px;
-  background: rgba(10, 12, 18, 0.6);
+  background: rgba(12, 12, 12, 0.7);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 10px 14px;
@@ -330,7 +331,7 @@ main {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  background: rgba(13, 17, 26, 0.6);
+  background: rgba(16, 16, 16, 0.72);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(12px);
@@ -349,7 +350,7 @@ main {
 .clip-media {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: rgba(10, 12, 18, 0.7);
+  background: rgba(12, 12, 12, 0.8);
 }
 
 .clip-media video {
@@ -419,8 +420,9 @@ main {
 }
 
 .btn.primary {
-  background: rgba(210, 220, 236, 0.2);
-  border-color: rgba(210, 220, 236, 0.35);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.15);
 }
 
 .btn.ghost {
@@ -429,8 +431,8 @@ main {
 }
 
 .btn.danger {
-  background: rgba(180, 88, 88, 0.22);
-  border-color: rgba(180, 88, 88, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn.small {
@@ -444,7 +446,7 @@ main {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.16);
   border-color: var(--border-strong);
 }
 
@@ -498,7 +500,7 @@ input[type="search"],
 input[type="file"] {
   padding: 12px 14px;
   border-radius: 12px;
-  background: rgba(10, 12, 18, 0.65);
+  background: rgba(12, 12, 12, 0.8);
   border: 1px solid var(--border);
   color: var(--text);
   transition: border 0.2s ease, box-shadow 0.2s ease;
@@ -586,7 +588,7 @@ input:focus {
 .progress-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, rgba(210, 220, 236, 0.6), rgba(255, 255, 255, 0.6));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.9));
   transition: width 0.2s ease;
 }
 
@@ -621,7 +623,7 @@ input:focus {
 .toast {
   padding: 12px 16px;
   border-radius: 14px;
-  background: rgba(15, 18, 26, 0.9);
+  background: rgba(14, 14, 14, 0.92);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
   opacity: 0;
@@ -738,19 +740,19 @@ body.custom-cursor {
 .cursor-dot {
   width: 6px;
   height: 6px;
-  background: rgba(232, 236, 243, 0.95);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .cursor-ring {
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(232, 236, 243, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   transition: transform 0.16s ease, border 0.2s ease, opacity 0.2s ease;
 }
 
 .cursor-ring.hover {
   transform: translate(-50%, -50%) scale(1.6);
-  border-color: rgba(232, 236, 243, 0.8);
+  border-color: rgba(255, 255, 255, 0.85);
 }
 
 .cursor-ring.hidden,

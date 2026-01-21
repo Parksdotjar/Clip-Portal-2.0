@@ -339,8 +339,8 @@ function initStarfield() {
       const radius = star.radius * (1 + star.depth * 0.6);
 
       ctx.beginPath();
-      ctx.fillStyle = `rgba(220, 230, 245, ${star.alpha})`;
-      ctx.shadowColor = "rgba(120, 140, 180, 0.35)";
+      ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+      ctx.shadowColor = "rgba(255, 255, 255, 0.3)";
       ctx.shadowBlur = 8 * star.depth;
       ctx.arc(x, y, radius, 0, Math.PI * 2);
       ctx.fill();
