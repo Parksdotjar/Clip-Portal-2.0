@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clip Portal - Sign up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="signup">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <div class="app">
+    <header class="top-nav">
+      <div class="nav-pill">
+        <div class="nav-left">
+          <a class="brand" href="index.html">CLIP PORTAL</a>
+          <nav class="nav-links">
+            <a class="nav-link" href="index.html">Discover</a>
+            <a class="nav-link" href="upload.html" data-requires-auth="true">Upload</a>
+            <a class="nav-link" href="dashboard.html" data-auth="in" data-requires-auth="true">Dashboard</a>
+          </nav>
+        </div>
+        <div class="nav-right">
+          <div class="auth-buttons" data-auth="out">
+            <a class="btn ghost" href="login.html">Log in</a>
+            <a class="btn primary" href="signup.html">Sign up</a>
+          </div>
+          <div class="profile-ghost" data-auth="out" aria-hidden="true"></div>
+          <div class="profile-area" data-auth="in">
+            <button id="profile-button" class="profile-button" aria-haspopup="true" aria-expanded="false">U</button>
+            <div id="profile-dropdown" class="profile-dropdown">
+              <a href="dashboard.html">Dashboard</a>
+              <a href="upload.html">Upload</a>
+              <button type="button" data-action="logout">Log out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <!-- Signup panel -->
+      <section class="auth-card glass reveal" style="--delay: 0ms;">
+        <h1>Create your account</h1>
+        <p class="subhead">Join the global clip library in seconds.</p>
+
+        <form id="signup-form" class="auth-form">
+          <div class="field">
+            <label for="signup-email">Email</label>
+            <input id="signup-email" name="email" type="email" placeholder="you@clipportal.com" required>
+          </div>
+          <div class="field">
+            <label for="signup-password">Password</label>
+            <input id="signup-password" name="password" type="password" placeholder="Create a password" required>
+          </div>
+          <div class="field">
+            <label for="signup-confirm">Confirm password</label>
+            <input id="signup-confirm" name="confirm" type="password" placeholder="Re-enter password" required>
+          </div>
+          <div id="signup-error" class="form-error" role="alert"></div>
+          <button class="btn primary full" type="submit">Create account</button>
+        </form>
+
+        <p class="form-footer">Already have an account? <a href="login.html">Log in</a></p>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card glass">
+      <h3 id="modal-title">Confirm</h3>
+      <p id="modal-body">Are you sure?</p>
+      <div class="modal-actions">
+        <button class="btn ghost" data-modal-cancel>Cancel</button>
+        <button class="btn danger" data-modal-confirm>Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
